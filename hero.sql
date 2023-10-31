@@ -182,3 +182,11 @@ SELECT p.player_name, h.hero_name
 FROM player p
 JOIN hero h ON h.hero_id = p.hero_id
 WHERE h.is_active = true;
+
+/*6	Create new branch named "feat/select-heroes-archers"
+
+	Provide a list of heroes classified as archers.*/
+SELECT c.class_name, h.hero_name
+FROM class c
+JOIN hero h ON c.class_id = h.class_id
+WHERE c.class_name = 'Skilled Archer' OR c.class_name = 'Range Archer';
