@@ -170,3 +170,6 @@ ADD item_price DECIMAL(10, 2);
 ALTER TABLE hero
 SET is_active = false
 WHERE hero_id = 1;
+--delete
+DELETE FROM HeroItem
+WHERE hero_id = 1;
