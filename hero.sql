@@ -173,3 +173,12 @@ WHERE hero_id = 1;
 --delete
 DELETE FROM HeroItem
 WHERE hero_id = 1;
+
+/*5	Create new branch named "feat/select-active-players"
+	
+	List the player names and their corresponding hero names that are actively in
+	use during gameplay, excluding those with inactive heroes.*/
+SELECT p.player_name, h.hero_name
+FROM player p
+JOIN hero h ON h.hero_id = p.hero_id
+WHERE h.is_active = true;
